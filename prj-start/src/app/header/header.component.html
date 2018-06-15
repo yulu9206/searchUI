@@ -6,23 +6,15 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>                        
             </button>
-            <a href="#" class="navbar-brand">Voice Search Test</a>
+            <a style="cursor: pointer" class="navbar-brand">Voice Search Test</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li class="dropdown" appDropdown>
-                    <a class="dropdown-toggle" href="#">Sentence List<span class="caret"></span></a>                        
-                    <ul class="dropdown-menu">
-                        <li><a href="#">List 1</a></li>
-                        <li><a href="#">List 2</a></li>
-                        <li><a href="#">List 3</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Test</a></li>
-                <li><a href="#">TestResults</a></li>
-                <li><a href="#">Score</a></li>
-                <li><a href="#">ScoreResults</a></li>
+                <li><a style="cursor: pointer">Home</a></li>
+                <li routerLinkActive="active"><a routerLink="/test" >Test</a></li>
+                <li routerLinkActive="active"><a routerLink="/results" >TestResults</a></li>
+                <li routerLinkActive="active"><a routerLink="/score">Score</a></li>
+                <li routerLinkActive="active"><a routerLink="/score-res">ScoreResults</a></li>
             </ul>
         </div>
     </div>

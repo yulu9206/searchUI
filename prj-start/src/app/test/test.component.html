@@ -1,7 +1,35 @@
-<form action="#">
-  <div class="form-group">
-    <label for="textarea">Test Sentences : (seperated with '.')</label>
-    <input type="textarea" class="form-control" id="sentencesInput" #sentenceInput>
+
+
+<div class="row">
+  <div class="col-xs-12">
+      <form action="#">
+          <div class="form-group">
+            <label for="text">Test Name :</label>
+            <input type="text" class="form-control" [(ngModel)]="listName" name="listName">
+            <label for="textarea">Test Sentences : (seperated with '.')</label>
+            <input type="textarea" class="form-control" id="sentencesInput" [(ngModel)]="sentences" name="sentenceList">
+          </div>
+          <button type="submit" class="btn btn-primary" (click)="onTest()">Run Test</button>
+          <button class="btn btn-danger" (click)="onClear()">Clear Fields</button>
+        </form>
   </div>
-  <button type="submit" class="btn btn-primary" (click)="onTest()">Run Test</button>
-</form>
+</div>
+<hr>
+<div class="row">
+  <div class="col-xs-12">
+    <!-- <app-recipe-item
+      *ngFor="let recipeEl of recipes; let i = index"
+      [recipe]="recipeEl"
+      [index]="i"></app-recipe-item> -->
+      <a
+      *ngFor="let sentenceList of sentenceLists"
+      style="cursor: pointer;"
+      (click)="onSelect(sentenceList)"
+      class="list-group-item clearfix">
+      <div class="pull-left">
+        <h5 class="list-group-item-heading">{{ sentenceList.name }}</h5>
+        <p class="list-group-item-text">{{ sentenceList.time }}</p>
+      </div>
+    </a>
+  </div>
+</div>

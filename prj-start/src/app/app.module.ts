@@ -12,7 +12,6 @@ import { ScoreResComponent } from './score-res/score-res.component';
 import { DropdownDirective } from './shared/dropdown.directive';
 import { TestService } from './test.service';
 import { AppRoutingModule } from './app-routing.module';
-import { RouterOutlet } from '@angular/router';
 
 @NgModule({
   declarations: [
